@@ -1,0 +1,2 @@
+docker inspect -f '{{.Config.Labels}}' backapp
+docker inspect -f '{{.Config.Labels}}' frontapp

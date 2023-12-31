@@ -1,0 +1,26 @@
+### http://localhost:8080/frontapp
+
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:45:58.556Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:45:58.556Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:45:58.558Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:45:58.601Z  INFO 1 --- [nio-8080-exec-1] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: null
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:45:58.603Z  INFO 1 --- [nio-8080-exec-1] h.c.c.api.controller.FrontappController  : Calling backapp
+cubix-cloudnative-block2-homework-backapp-1   | 2023-12-31T09:45:58.678Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+cubix-cloudnative-block2-homework-backapp-1   | 2023-12-31T09:45:58.678Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+cubix-cloudnative-block2-homework-backapp-1   | 2023-12-31T09:45:58.681Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+cubix-cloudnative-block2-homework-backapp-1   | 2023-12-31T09:45:58.733Z  INFO 1 --- [nio-8080-exec-1] hu.cubix.cloud.api.BackappController     : Request arrived with message
+cubix-cloudnative-block2-homework-backapp-1   | 2023-12-31T09:45:58.735Z  INFO 1 --- [nio-8080-exec-1] hu.cubix.cloud.api.BackappController     : Message was empty, fall back to default
+cubix-cloudnative-block2-homework-backapp-1   | 2023-12-31T09:45:58.735Z  INFO 1 --- [nio-8080-exec-1] hu.cubix.cloud.api.BackappController     : Default message was empty, falling back to hardcoded default
+cubix-cloudnative-block2-homework-backapp-1   | 2023-12-31T09:45:58.737Z  INFO 1 --- [nio-8080-exec-1] hu.cubix.cloud.api.BackappController     : Returning response: BackappResponse[time=2023-12-31T09:45:58.735491966, message=hardcoded-default-backapp-message, homeworkOwner=Dániel Miskovits, hostAddress=172.25.0.2, extraImageData=Cubix training]
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:45:58.916Z  INFO 1 --- [nio-8080-exec-1] h.c.c.api.controller.FrontappController  : Backapp call was successful, response was: BackappResponse[time=2023-12-31T09:45:58.735491966, message=hardcoded-default-backapp-message, homeworkOwner=Dániel Miskovits, hostAddress=172.25.0.2, extraImageData=Cubix training]
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:45:58.924Z  INFO 1 --- [nio-8080-exec-1] h.c.c.api.controller.FrontappController  : Response will be: FrontappResponse[msForReply=132, backappMessage=hardcoded-default-backapp-message, frontappHomeworkOwner=Dániel Miskovits, frontappHostAddress=172.25.0.3, backappHomeworkOwner=Dániel Miskovits, backappHostAddress=172.25.0.2, doExtraImageDataMatch=true]
+
+
+### http://localhost:8080/frontapp?message=This Is The Way!
+
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:49:33.864Z  INFO 1 --- [nio-8080-exec-5] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: This Is The Way!
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:49:33.864Z  INFO 1 --- [nio-8080-exec-5] h.c.c.api.controller.FrontappController  : Calling backapp
+cubix-cloudnative-block2-homework-backapp-1   | 2023-12-31T09:49:33.869Z  INFO 1 --- [nio-8080-exec-3] hu.cubix.cloud.api.BackappController     : Request arrived with message This Is The Way!
+cubix-cloudnative-block2-homework-backapp-1   | 2023-12-31T09:49:33.870Z  INFO 1 --- [nio-8080-exec-3] hu.cubix.cloud.api.BackappController     : Returning response: BackappResponse[time=2023-12-31T09:49:33.870322262, message=This Is The Way!, homeworkOwner=Dániel Miskovits, hostAddress=172.25.0.2, extraImageData=Cubix training]
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:49:33.875Z  INFO 1 --- [nio-8080-exec-5] h.c.c.api.controller.FrontappController  : Backapp call was successful, response was: BackappResponse[time=2023-12-31T09:49:33.870322262, message=This Is The Way!, homeworkOwner=Dániel Miskovits, hostAddress=172.25.0.2, extraImageData=Cubix training]
+cubix-cloudnative-block2-homework-frontapp-1  | 2023-12-31T09:49:33.875Z  INFO 1 --- [nio-8080-exec-5] h.c.c.api.controller.FrontappController  : Response will be: FrontappResponse[msForReply=5, backappMessage=This Is The Way!, frontappHomeworkOwner=Dániel Miskovits, frontappHostAddress=172.25.0.3, backappHomeworkOwner=Dániel Miskovits, backappHostAddress=172.25.0.2, doExtraImageDataMatch=true]
